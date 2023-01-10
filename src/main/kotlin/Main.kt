@@ -1,9 +1,5 @@
-import kotlin.system.exitProcess
-
 fun main() {
     println("Bem vindo ao Bytebank!")
-
-//    testaComportamentosConta()
 
     val lucas = Funcionario(
         "Lucas",
@@ -28,12 +24,32 @@ fun main() {
     println("Salário: ${gabriel.salario}")
     println("Bonificação: ${gabriel.bonificacao()}")
 
-    if (gabriel.autenticacao(1234)){
+    if (gabriel.autenticacao(1234)) {
         println("Atenticação sucedida!")
-    }else {
+    } else {
         println("Aitenticação falhou.")
     }
 
+    val guilherme = Diretor(
+        "Guilherme",
+        "333.333.333-33",
+        3000.0,
+        4321,
+        200.0
+    )
+
+
+    println("Nome: ${guilherme.nome}")
+    println("CPF: ${guilherme.cpf}")
+    println("Salário: ${guilherme.salario}")
+    println("Bonificação: ${guilherme.bonificacao()}")
+    println("PLR: ${guilherme.plr}")
+
+    if (guilherme.autenticacao(4321)) {
+        println("Atenticação sucedida!")
+    } else {
+        println("Aitenticação falhou.")
+    }
 }
 
 
