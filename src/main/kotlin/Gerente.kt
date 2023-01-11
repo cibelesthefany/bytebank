@@ -10,12 +10,11 @@ open class Gerente(
     salario
 ) {
 
-
     override fun bonificacao(): Double {
-        return salario * 0.2
+        return super.bonificacao() + salario
     }
 
-     open fun autenticacao(senha: Int): Boolean {
+    open fun autenticacao(senha: Int): Boolean {
         if (this.senha == senha) {
             return true
         }

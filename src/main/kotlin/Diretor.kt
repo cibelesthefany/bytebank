@@ -12,12 +12,9 @@ class Diretor(
     senha
 ) {
 
-
     override fun bonificacao(): Double {
-        return salario * 0.3
+        return super.bonificacao() + salario + plr
     }
-
-
 
     override fun autenticacao(senha: Int): Boolean {
         if (this.senha == senha) {

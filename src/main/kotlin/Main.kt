@@ -33,7 +33,7 @@ fun main() {
     val guilherme = Diretor(
         "Guilherme",
         "333.333.333-33",
-        3000.0,
+        4000.0,
         4321,
         200.0
     )
