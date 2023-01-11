@@ -1,8 +1,8 @@
-class Gerente(
+open class Gerente(
     nome: String,
     cpf: String,
     salario: Double,
-    val senha: Int
+    open val senha: Int
 
 ) : Funcionario(
     nome,
@@ -15,7 +15,7 @@ class Gerente(
         return salario * 0.2
     }
 
-    fun autenticacao(senha: Int): Boolean {
+     open fun autenticacao(senha: Int): Boolean {
         if (this.senha == senha) {
             return true
         }
