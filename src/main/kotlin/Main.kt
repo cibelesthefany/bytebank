@@ -10,7 +10,7 @@ fun main() {
     println("Nome: ${lucas.nome}")
     println("CPF: ${lucas.cpf}")
     println("Salário: ${lucas.salario}")
-    println("Bonificação: ${lucas.bonificacao()}")
+    println("Bonificação: ${lucas.bonificacao}")
 
     val gabriel = Gerente(
         "Gabriel",
@@ -22,7 +22,7 @@ fun main() {
     println("Nome: ${gabriel.nome}")
     println("CPF: ${gabriel.cpf}")
     println("Salário: ${gabriel.salario}")
-    println("Bonificação: ${gabriel.bonificacao()}")
+    println("Bonificação: ${gabriel.bonificacao}")
 
     if (gabriel.autenticacao(1234)) {
         println("Atenticação sucedida!")
@@ -42,7 +42,7 @@ fun main() {
     println("Nome: ${guilherme.nome}")
     println("CPF: ${guilherme.cpf}")
     println("Salário: ${guilherme.salario}")
-    println("Bonificação: ${guilherme.bonificacao()}")
+    println("Bonificação: ${guilherme.bonificacao}")
     println("PLR: ${guilherme.plr}")
 
     if (guilherme.autenticacao(4321)) {
@@ -50,6 +50,13 @@ fun main() {
     } else {
         println("Aitenticação falhou.")
     }
+
+    val calculadora = CalculadoraBonificacao()
+    calculadora.registra(lucas)
+    calculadora.registra(gabriel)
+    calculadora.registra(guilherme)
+
+    println("total de bonificação: ${calculadora.total}")
 }
 
 

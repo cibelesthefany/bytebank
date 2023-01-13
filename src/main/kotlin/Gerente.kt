@@ -5,14 +5,16 @@ open class Gerente(
     open val senha: Int
 
 ) : Funcionario(
-    nome,
-    cpf,
-    salario
+    nome = nome,
+    cpf = cpf,
+    salario = salario
 ) {
 
-    override fun bonificacao(): Double {
-        return super.bonificacao() + salario
-    }
+    override val bonificacao: Double
+        get() {
+            return super.bonificacao + salario
+
+        }
 
     open fun autenticacao(senha: Int): Boolean {
         if (this.senha == senha) {
