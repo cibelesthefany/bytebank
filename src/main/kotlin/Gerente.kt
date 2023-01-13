@@ -12,7 +12,7 @@ open class Gerente(
 
     override val bonificacao: Double
         get() {
-            return super.bonificacao + salario
+            return super.bonificacao
 
         }
 
