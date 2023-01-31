@@ -57,6 +57,7 @@ fun main() {
     calculadora.registra(guilherme)
 
     println("total de bonificação: ${calculadora.total}")
+
 }
 
 
